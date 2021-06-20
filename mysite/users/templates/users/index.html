@@ -1,0 +1,10 @@
+{% if user_list %}
+    <ul>
+    {% for user in user_list %}
+    <li>{{ user.name }}　{{ user.birthday }}　{{ user.get_gender_display }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are available.</p>
+{% endif %}
+<a href="{% url 'users:register' %}">ユーザ登録</a>

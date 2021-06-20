@@ -1,0 +1,16 @@
+<head>
+    <meta charset="utf-8" />
+    <title>フォーム</title>
+</head>
+ 
+<body>
+    <h1>ユーザ登録</h1>
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">送信</button>
+    </form>
+    <p>{{ message }}</p>
+</body>
+ 
+</html>
